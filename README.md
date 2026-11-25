@@ -2,6 +2,15 @@
 
 Code-based, ATS-friendly CV driven by a single YAML source (`cv.yaml`) and rendered with [Typst](https://typst.app/).
 
+## Latest PDF
+
+Download the latest release from [GitHub Releases](https://github.com/0xDSousa/resume/releases/latest):
+
+- [Diogo_Sousa_CV.pdf](https://github.com/0xDSousa/resume/releases/latest/download/Diogo_Sousa_CV.pdf) (Light mode, ATS-recommended)
+- [Diogo_Sousa_CV_photo.pdf](https://github.com/0xDSousa/resume/releases/latest/download/Diogo_Sousa_CV_photo.pdf) (Light mode with photo)
+- [Diogo_Sousa_CV_dark.pdf](https://github.com/0xDSousa/resume/releases/latest/download/Diogo_Sousa_CV_dark.pdf) (Dark mode)
+- [Diogo_Sousa_CV_dark_photo.pdf](https://github.com/0xDSousa/resume/releases/latest/download/Diogo_Sousa_CV_dark_photo.pdf) (Dark mode with photo)
+
 ## Prerequisites
 
 - [Typst](https://typst.app/) (`typst`)
@@ -34,3 +43,7 @@ make clean         # Remove generated build/ outputs
 - `scripts/ats_audit.py` — Audits generated PDFs with `pdftotext` and `pypdf` (checks page limit, ligatures, icon glyphs, hyphen breaks, clickable links, and text parity across variants)
 - `tests/test_ats_extractors.py` — `pytest` suite verifying every PDF variant across 6 distinct PDF extractors (Poppler raw, Poppler layout, `pypdf`, `pdfminer.six`, `PyMuPDF`, `pypdfium2`)
 - `.github/workflows/build-cv.yml` — Builds all 4 PDFs on `v*` tag pushes (or manual dispatch), runs the strict ATS audit + 6-extractor test suite, uploads PDFs as workflow artifacts, and publishes a GitHub Release
+
+## License
+
+The Typst template, build tooling, ATS audit script, and test suite are licensed under the [MIT License](LICENSE). Personal CV content (`cv.yaml`), portrait photography (`assets/photo.jpg`), and generated CV PDFs are excluded from the MIT license and remain All Rights Reserved.
