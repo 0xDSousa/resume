@@ -1,0 +1,68 @@
+name: Build CV
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nimbus Sans font and Poppler utilities
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-urw-base35 poppler-utils
+          fc-cache -f
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: "0.15.1"
+
+      - name: Verify Nimbus Sans is available to Typst
+        run: typst fonts | grep -i "Nimbus Sans"
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Sync Python audit environment
+        run: uv sync --frozen
+
+      - name: Build all CV variants
+        run: make pdf photo dark dark-photo
+
+      - name: Run strict ATS & 2-page audit
+        run: uv run python scripts/ats_audit.py --strict --max-pages 2
+
+      - name: Run 6-extractor ATS compatibility test suite
+        run: uv run pytest -v
+
+      - name: Upload PDFs and ATS audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdfs
+          path: |
+            build/Diogo_Sousa_CV*.pdf
+            build/ats-audit/*.txt
+          retention-days: 90
+
+      - name: Attach PDFs to GitHub Release (on v* tags)
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          gh release create "$TAG" \
+            build/Diogo_Sousa_CV.pdf \
+            build/Diogo_Sousa_CV_photo.pdf \
+            build/Diogo_Sousa_CV_dark.pdf \
+            build/Diogo_Sousa_CV_dark_photo.pdf \
+            --title "Resume $TAG" \
+            --notes "Automated build from $GITHUB_SHA (all ATS checks passed)."

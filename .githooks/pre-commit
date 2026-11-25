@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Running CV build + 6-extractor ATS test suite..."
+make test

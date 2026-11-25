@@ -1,0 +1,102 @@
+cv:
+  name: Diogo Sousa
+  headline: Engineering Manager | Technical Product & Strategy | CISSP
+  location: Lisbon, Portugal
+  email: diogo.edgar.sousa@gmail.com
+  social_networks:
+    - network: LinkedIn
+      username: 0xDSousa
+    - network: GitHub
+      username: 0xDSousa
+
+  sections:
+    summary:
+      - Started in software engineering (MSc in Information Security, CISSP) before moving into cloud security and engineering management at Platform.sh and Canonical, where I ran Ubuntu's vulnerability management strategy and partnered closely with product and sales teams around Ubuntu Pro.
+      - Currently building secure Python MCP tooling and agentic workflows for a banking client while turning unpolished user stories into clear technical specs. Targeting security roles where engineering depth, prioritization discipline, technical storytelling, and community building converge. Outside of work, I am an OWASP Lisboa Chapter Leader and speak publicly on security topics ranging from cryptography and SBOMs to AI-assisted development.
+
+    skills:
+      - label: Product & Strategy
+        details: Roadmap & Backlog Prioritization, Technical Specifications, Agile Methodologies, Jira & Workflow Automation, Vulnerability Response Rubrics, Sales Enablement & Go-to-Market (GTM), Escalation Triage
+      - label: Security & Threat Ops
+        details: Vulnerability Management (CISA KEV, CVE/CNA Operations, SBOMs), MCP Security & Data Minimization, Threat Intelligence, Incident Response, Cloud Security (AWS, Azure, GCP), Compliance (HIPAA, PCI DSS, SOC 2 Type II), HackerOne VDP, CISSP
+      - label: Technical & Community
+        details: Python, Java, Shell, C, Go, Agentic Workflows & MCP Servers, Linux/Ubuntu Internals, Cryptography, AI Security & Hardening, Identity & Access Management, Public Speaking, Community Building
+      - label: Languages
+        details: Portuguese (Native), English (Bilingual), Spanish (Limited Working), French (Elementary)
+
+    experience:
+      - company: Freelance
+        position: Senior Software Engineer (Agentic AI & MCP)
+        start_date: 2026-10
+        end_date: present
+        highlights:
+          - '**Shipped a production Python Model Context Protocol (MCP) server for a banking-sector client**, accelerating user-facing agentic chatbot interactions with banking APIs while enforcing PII minimization and sanitized audit logging that preserves traceability without exposing sensitive data.'
+          - '**Translated unpolished client user stories into quality-gated technical specifications**, authoring reusable agentic skills and workflows to surface cross-story inconsistencies and enforce clear acceptance criteria.'
+
+      - company: Canonical
+        position: Engineering Manager, Security Engineering
+        start_date: 2024-01
+        end_date: 2026-09
+        highlights:
+          - '**Owned Ubuntu''s Vulnerability Response rubrics and built Jira-native automation** combining public severity scores and team insight to triage patches and handle customer priority overrides across every LTS release since 2014 (up to 50,000+ packages).'
+          - '**Raised CISA KEV coverage from ~70% to 97% and boosted Ubuntu Pro Universe patch throughput by 30–70% across Focal, Jammy, and Noble**, publishing the prioritization framework on the [Ubuntu blog](https://ubuntu.com/blog/how-ubuntu-keeps-you-secure-with-kev-prioritisation).'
+          - '**Served as a lead operator of the Canonical CNA** (CVE Numbering Authority), verifying data accuracy and publishing **100+ CVEs** to maintain trusted upstream security advisories.'
+          - '**Delivered the technical groundwork to launch Ubuntu Pro Legacy Support (+2 years) and championed expanding it to +5 years** based on commercial traction and lifecycle symmetry; partnered with Product at internal commercial events to enable Sales teams on open source packaging and patching.'
+          - '**Managed 7 direct reports while collaborating across the 30+ person Security Engineering team**, earning top ratings in every 6-month review with strong feedback from reports; received multiple peer-nominated awards, including as Hiring Lead screening high-volume pipelines (**315 technical interviews**, ~10 hires).'
+
+      - company: Platform.sh
+        position: Manager, Security Engineering & Operations
+        start_date: 2023-01
+        end_date: 2023-12
+        highlights:
+          - '**Converted a cloud PaaS region to HIPAA-ready to unlock regulated US healthcare workloads**, owning the company-wide security strategy and certification roadmap (HIPAA, PCI DSS, SOC 2 Type II) while coordinating network segmentation, penetration testing, vendor evaluations, and procurement.'
+          - '**Scaled Security into three specialized teams** with dedicated career paths and **drove first-response time under 10 minutes** via autonomous follow-the-sun on-call operations and continual training.'
+          - '**Delivered internal security tooling and culture programs**, expanding vulnerability scanning and threat intelligence coverage while shipping an internal security awareness and compliance training tool.'
+
+      - company: Platform.sh
+        position: Security Engineer
+        start_date: 2021-09
+        end_date: 2022-12
+        highlights:
+          - '**Cut monthly access control review time by 94% (9 hours to 30 minutes)** by building Python compliance automation covering asset audits, ACLs, MFA enforcement, and IdP onboarding/offboarding.'
+          - '**Engineered multi-cloud forensic incident response tooling (AWS, Azure, GCP)**, deployed across **50+ security incidents** with fully automated evidence collection.'
+          - '**Assessed 400+ kernel and platform vulnerability reports** and coordinated Platform.sh''s **HackerOne** vulnerability disclosure program from intake to fix deployment while maintaining passing quarterly PCI DSS scans.'
+
+      - company: Quorum Born IT
+        position: Software Engineer
+        start_date: 2019-07
+        end_date: 2021-08
+        highlights:
+          - '**Designed algorithms in Java under software transactional memory constraints** (FenixFramework / JVSTM) for higher-education systems, including an auditable fair-assignment engine allocating students to capacity-constrained slots.'
+
+    community_and_speaking:
+      - name: OWASP Lisboa (Chapter Leader)
+        start_date: 2024-12
+        end_date: present
+        highlights:
+          - '**Co-lead Portugal''s OWASP chapter**, growing the community to **1,200+ Meetup members** by securing venues and speakers and hosting **8 AppSec events** since joining.'
+
+      - name: Selected Public Talks
+        highlights:
+          - '[Securing the Ship of Theseus](https://www.youtube.com/watch?v=o5BzV11g3UI), OWASP AppSec Days Portugal 2026: securing AI-generated code and dependency replacement using OWASP practices.'
+          - '[Ratiocinor, ergo mente aegrotare possum](https://www.youtube.com/watch?v=GvCe6wNkP-g), Ubuntu Summit 25.10 (Lightning Talk): LLM training-data poisoning and adversarial dataset risks.'
+          - '[It''s the Middle of the Night; Do You Know Where Your Maintainers Are?](https://www.youtube.com/watch?v=3lva99-vVf4), BSides Lisbon 2025: open source maintainer sustainability and vulnerability management.'
+          - '[Vulnerability Response of Last Resort](https://www.youtube.com/watch?v=AqT5_tUBBdM), FIRST VulnCon 2025: how Linux distributions serve as vulnerability responders for under-maintained packages.'
+          - 'Co-hosted **Ubuntu Summit 25.10 and 26.04** (delivered the 26.04 closing address and a lightning talk on [open source maintenance sustainability](https://www.youtube.com/watch?v=a0GR1D7Q4_Y)); full talk showcase shared on [LinkedIn](https://linkedin.com/in/0xDSousa).'
+
+    certifications:
+      - name: 'ISC2 Certified Information Systems Security Professional (CISSP) ([Credly](https://www.credly.com/badges/4b8dfcb6-e05a-4b12-99bf-7d93c20f7824/public_url))'
+        date: 2023-07
+
+    education:
+      - institution: Faculty of Sciences of the University of Lisbon
+        area: Information Security
+        degree: MSc
+
+      - institution: Faculty of Sciences of the University of Lisbon
+        area: Informatics Engineering
+        degree: BSc
+
+      - institution: Faculty of Human and Social Sciences of the University of Algarve
+        area: Psychology
+        degree: BSc

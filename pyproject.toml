@@ -1,0 +1,17 @@
+[project]
+name = "cv"
+version = "0.1.0"
+description = "Code-based, ATS-friendly Typst CV driven by YAML"
+requires-python = ">=3.12"
+dependencies = [
+    "pypdf>=5.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pyyaml>=6.0",
+    "pdfminer.six>=20240706",
+    "pymupdf>=1.25",
+    "pypdfium2>=4.30",
+]
